@@ -18,40 +18,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-E1-4F7">
-                                <rect key="frame" x="184" y="585" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-E1-4F7">
+                                <rect key="frame" x="191.5" y="524" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M7Z-6p-sm2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4i-7g-DMD">
-                                <rect key="frame" x="306" y="585" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4i-7g-DMD">
+                                <rect key="frame" x="303" y="524" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sM6-uN-XDv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-l2-Ulp">
-                                <rect key="frame" x="68" y="585" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-l2-Ulp">
+                                <rect key="frame" x="80" y="524" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p6p-rh-8Gv"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-ME-hqU">
-                                <rect key="frame" x="87" y="235" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-ME-hqU">
+                                <rect key="frame" x="132" y="224" width="150" height="150"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FG8-22-AXX"/>
+                                    <constraint firstAttribute="width" constant="150" id="swd-lP-a7k"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VSO-ih-r5e" appends="YES" id="x4F-HW-tcH"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uQS-E1-4F7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2NZ-AM-zVE"/>
+                            <constraint firstItem="uQS-E1-4F7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="el7-l2-Ulp" secondAttribute="trailing" constant="8" symbolic="YES" id="4A8-v7-6Vw"/>
+                            <constraint firstItem="aUz-ME-hqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5zC-Cd-NeA"/>
+                            <constraint firstItem="el7-l2-Ulp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="GfH-mC-ha1"/>
+                            <constraint firstItem="uQS-E1-4F7" firstAttribute="top" secondItem="aUz-ME-hqU" secondAttribute="bottom" constant="150" id="TFi-9x-cq6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V4i-7g-DMD" secondAttribute="trailing" constant="80" id="Vge-4Q-Jux"/>
+                            <constraint firstItem="V4i-7g-DMD" firstAttribute="bottom" secondItem="uQS-E1-4F7" secondAttribute="bottom" id="WBc-0a-3dG"/>
+                            <constraint firstItem="aUz-ME-hqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="hW6-b8-6Qg"/>
+                            <constraint firstItem="el7-l2-Ulp" firstAttribute="bottom" secondItem="uQS-E1-4F7" secondAttribute="bottom" id="pRo-nq-d5Q"/>
+                            <constraint firstItem="V4i-7g-DMD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uQS-E1-4F7" secondAttribute="trailing" constant="8" symbolic="YES" id="zAw-Ay-rAU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -79,20 +91,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-Vq-VY0">
-                                <rect key="frame" x="184" y="588" width="46" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-jK-1NQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-Vq-VY0">
+                                <rect key="frame" x="191.5" y="640" width="31" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bve-BS-Xs5"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="3XI-hn-fbj" kind="unwind" unwindAction="unwind:" id="689-1Z-ex4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-jK-1NQ">
-                                <rect key="frame" x="87" y="226" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zxo-jK-1NQ" firstAttribute="trailing" secondItem="M7L-ZV-9zw" secondAttribute="trailing" id="4U5-sN-j9C"/>
+                            <constraint firstItem="M7L-ZV-9zw" firstAttribute="bottom" secondItem="gsO-Vq-VY0" secondAttribute="bottom" constant="167" id="NSP-zH-Rjd"/>
+                            <constraint firstItem="Zxo-jK-1NQ" firstAttribute="leading" secondItem="M7L-ZV-9zw" secondAttribute="leading" id="dRK-CL-8nE"/>
+                            <constraint firstItem="Zxo-jK-1NQ" firstAttribute="top" secondItem="M7L-ZV-9zw" secondAttribute="top" id="gQ9-LH-Glk"/>
+                            <constraint firstItem="gsO-Vq-VY0" firstAttribute="centerX" secondItem="Zxo-jK-1NQ" secondAttribute="centerX" id="wXg-M3-fEQ"/>
+                            <constraint firstItem="gsO-Vq-VY0" firstAttribute="top" secondItem="Zxo-jK-1NQ" secondAttribute="bottom" constant="60" id="x90-cz-kg1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M7L-ZV-9zw"/>
                     </view>
                     <connections>
