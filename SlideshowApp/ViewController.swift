@@ -103,6 +103,19 @@ class ViewController: UIViewController {
     // 画像をtapした時に ZoomViewController に遷移する
     @IBAction func onTapImage(_ sender: Any) {
         self.performSegue(withIdentifier: "zoom", sender: nil)
+        if timer != nil {
+            // 停止時に停止ボタンが再生ボタンに変わる
+            startStopButton.setTitle("再生", for: .normal)
+            // 停止時に戻るボタン、進むボタンの色を戻してタップ可にする
+            backButton.isEnabled = true
+            backButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+            nextButton.isEnabled = true
+            nextButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+            
+            // タイマーを停止し、timer == nil で判断するので timer = nil にする
+            self.timer.invalidate()
+            self.timer = nil
+        }
     }
     
 }
